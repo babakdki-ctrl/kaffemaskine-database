@@ -210,7 +210,7 @@ INSERT INTO Drikkelse (navn) VALUES('Cappuccino');
 -- Putte de forskellige ingredienser i largeret (IngrediensLager)
 INSERT INTO IngrediensLager(IngrediensID,Navn,Mængde,Enhed) VALUES (1, 'Kaffebønner',5000.00,'Gram');
 INSERT INTO IngrediensLager(IngrediensID,Navn,Mængde,Enhed) VALUES (2, 'Vand',10000.00,'ml');
--- Programmere opskriften
+-- Programmere,altså skriv opskriften ind
 INSERT INTO Opskrift(OpskriftID,Mængde,IngrediensLager_IngrediensID,Drikkelse_DrinkID) VALUES(1,15.00,1,1);
 INSERT INTO Opskrift(OpskriftID,Mængde,IngrediensLager_IngrediensID,Drikkelse_DrinkID) VALUES(2,30.00,2,1);
 -- En medarbejder,nummer 1, køber en Ekspresso med kort
