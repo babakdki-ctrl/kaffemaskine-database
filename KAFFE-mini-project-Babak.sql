@@ -207,7 +207,7 @@ INSERT INTO Medarbejdere(Navn,ErAutoriseret) VALUES('kvinde',1);
 INSERT INTO Drikkelse (navn) VALUES('Espresso');
 INSERT INTO Drikkelse (navn) VALUES('Americano');
 INSERT INTO Drikkelse (navn) VALUES('Cappuccino');
--- Putte ingredienser i largeret (IngrediensLager)
+-- Putte de forskellige ingredienser i largeret (IngrediensLager)
 INSERT INTO IngrediensLager(IngrediensID,Navn,Mængde,Enhed) VALUES (1, 'Kaffebønner',5000.00,'Gram');
 INSERT INTO IngrediensLager(IngrediensID,Navn,Mængde,Enhed) VALUES (2, 'Vand',10000.00,'ml');
 -- Programmere opskriften
