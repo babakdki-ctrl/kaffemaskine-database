@@ -204,9 +204,9 @@ VALUES (1,1000.00,5000.00);
 INSERT INTO Medarbejdere(Navn,ErAutoriseret) VALUES('Mand',0);
 INSERT INTO Medarbejdere(Navn,ErAutoriseret) VALUES('kvinde',1);
 -- Lave menuen
-INSERT INTO Drikkelse (navn) VALUES('Espresso');
-INSERT INTO Drikkelse (navn) VALUES('Americano');
-INSERT INTO Drikkelse (navn) VALUES('Cappuccino');
+INSERT INTO Drikkelse (navn,pris) VALUES('Espresso',25.00);
+INSERT INTO Drikkelse (navn,pris) VALUES('Americano',30.00);
+INSERT INTO Drikkelse (navn,pris) VALUES('Cappuccino',20.00);
 -- Putte de forskellige ingredienser i largeret (IngrediensLager)
 INSERT INTO IngrediensLager(IngrediensID,Navn,Mængde,Enhed) VALUES (1, 'Kaffebønner',5000.00,'Gram');
 INSERT INTO IngrediensLager(IngrediensID,Navn,Mængde,Enhed) VALUES (2, 'Vand',10000.00,'ml');
@@ -227,7 +227,7 @@ Select t.Tidspunkt,t.Type,t.metode,d.navn AS Drik, m.Navn AS Medarbejdere
 FROM Transaktioner t
 LEFT JOIN Drikkelse d ON t.Drikkelse_DrinkID=d.DrinkID
 LEFT JOIN Medarbejdere m ON t.Medarbejdere_MedarbejderID = m.MedarbejderID
-WHERE t.tidspunkt>='2022-05-01 00:00:00' And t.type='Køb';
+WHERE t.tidspunkt>='2022-05-01 00:00:00' And t.type='køb';
 -- querie 2 om at vise lagerindholdsstatus
 SELECT Navn,Mængde,Enhed FROM IngrediensLager;
 SELECT Beløb AS 'kontanter' FROM kasseaperat;
